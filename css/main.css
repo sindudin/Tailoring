@@ -1,0 +1,972 @@
+/*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+*,*:before,*:after{
+    box-sizing: border-box;
+}
+
+
+body {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  background-color: #E6E9EA;
+}
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+ul,ol{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+header{
+    width: 100%;
+    height: 60px;
+    background-color: #51445f;
+    position: fixed;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    z-index: 999;
+}
+
+nav{
+    width: 250px;
+    height: calc(100vh - 60px);
+    background-color:#51445f;
+    position: fixed;
+    top:60px;
+    z-index: 999;
+}
+
+
+section.content{
+    width: 100%;
+    height: 100vh;
+    padding-top: 80px;
+    padding-left: 270px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.content-wrap {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+
+.logo {
+    width: 250px;
+    background-color: #493d55;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.logo h2 {
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 0;
+    color: #fff;
+    flex: 1;
+}
+
+.menu-bar {
+    display: none;
+    justify-content: center;
+    flex-flow: row wrap;
+    align-self: center;
+    padding-left: 20px;
+}
+
+.menu-bar .icon-menu {
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+    align-self: center;
+}
+
+.menu-bar h2 {
+    line-height: 0;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 0;
+    color: #fff;
+    padding-left: 10px;
+}
+
+.user-settings{
+    align-self: center;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.user-settings li {
+    display: inline;
+    padding: 0 10px;
+    color: #fff;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.user-settings li .icon-arrow-down{
+    font-size: 9px;
+    padding-left: 5px;
+}
+
+nav li a {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    font-size: 14px;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+nav li i {
+    padding-right: 15px;
+}
+
+nav li:not(.active):hover a {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+nav li.active{
+    background-color:#1C9F84;
+}
+
+nav li.active a{
+    color: #fff;
+}
+
+
+.job-list-wrap {
+    /* width: 25%; */
+    height: 100%;
+    /* float: left; */
+    overflow: hidden;
+    border-right: 1px solid #f0f0f0;
+    flex: 2;
+}
+
+.job-top {
+    width: 100%;
+    display: flex;
+    padding: 5px 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.job-top h2 {
+    font-size: 16px;
+    flex: 1;
+    font-weight: 500;
+}
+
+button.add-job {
+    width: auto;
+    margin: 10px auto;
+    /* display: block; */
+    padding: 5px 10px;
+    border: none;
+    background-color: #1C9F84;
+    border-radius: 5px;
+    line-height: 1.5;
+    font-size: 12px;
+    color: #fff;
+    cursor: pointer;
+    /* flex: 0;*/
+}
+
+
+
+/*button.add-job{
+        background: #3dbe8b;
+    background: -webkit-linear-gradient(#43c692,#39b885);
+    background: linear-gradient(#43c692,#39b885);
+    border: 1px solid #1f7c57;
+    box-shadow: inset #4fd3aa 0 1px;
+    color: #fff;
+    position: relative;
+    text-decoration: none;
+    text-shadow: #1c8f3d 0 1px 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: background 150ms;
+    padding: 5px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}*/
+
+.job-list-bottom{
+    overflow-y: auto;
+    height: calc(100% - 60px);
+}
+
+.job-list-bottom li {
+    padding: 15px 10px;
+    /* overflow: hidden; */
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+}
+
+/*.job-list-bottom li:nth-child(odd) {
+    background-color: #F5F5F5;
+}
+.job-list-bottom li:nth-child(even) {
+    background-color: #fff;
+}*/
+
+.job-list-bottom li:hover {
+    background-color: #F5F5F5;
+}
+
+.job-list-bottom li p{
+    margin: 0px;
+}
+
+
+.customer-name,.job-amount{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.bill-no{
+    color: #1C9F84;
+    font-weight: 500;
+}
+
+.bill-no span{
+    color: #949493;
+    font-weight: normal;
+}
+
+.job-badge{
+    text-align: right;
+    background-color: #53AAE1;
+    float: right;
+    padding: 3px 5px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 11px;
+    text-transform: capitalize;
+}
+
+.job-invoice-wrap {
+    /* float: left; */
+    /* width: 75%; */
+    height: 100%;
+    overflow-y: auto;
+    flex: 3;
+    padding: 60px;
+}
+
+.invoice-info-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.invoice-details h2 {
+    font-size: 32px;
+    line-height: 0;
+}
+
+.shipping-details h3 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.shipping-details p {
+    margin: 0;
+}
+
+.invoice-table{
+    margin-top: 40px;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table thead tr th{
+   text-align: left;
+    background-color: #E6E9EA;
+    border: none;
+}
+table thead tr th,table tbody tr td,table tfoot tr td{
+    padding: 15px;
+}
+
+table tbody tr{
+    border-bottom: 1px solid #1C9F84;
+}
+
+table tbody tr td{
+    font-size: 14px;
+}
+
+table tfoot tr td{
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.td-left{
+    text-align:left;
+}
+.td-right{
+    text-align:right;
+}
+
+
+.form-wrap {
+    width: 100%;
+    padding: 20px;
+}
+
+.form-wrap form{
+    display: flex;
+    justify-content: space-between;
+}
+
+.row.customer-details {
+    flex: 1;
+    border-right: 1px solid #ccc;
+    padding-right: 10px;
+}
+
+.row.entry-wrap{
+    flex: 3;
+    padding-left: 10px;
+    border-right: 1px solid #ccc;
+}
+
+.form-group{
+    padding: 10px;
+    position: relative;
+}
+
+.box-heading{
+    padding: 0 10px;
+    margin: 0px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    color: #868ba1;
+}
+
+.form-control{
+    display: block;
+    width: 100%;
+    padding: 0.65rem 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.25;
+    color: #495057;
+    background-color: #fff;
+    background-image: none;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.form-control:focus{
+    color: #495057;
+    background-color: #fff;
+    border-color: #229E83;
+    outline: none;
+}
+
+.form-group  .select{
+    display: flex;
+}
+
+.form-group .select li{
+     /*display: inline-table;*/
+    /* width: 45px; */
+    text-align: center;
+    padding: 10px 25px;
+    font-size: 0.875rem;
+    line-height: 1.25;
+    /* border: 1px solid rgba(0, 0, 0, 0.15); */
+    /* border-radius: 2px; */
+    /* float: left; */
+    border: 1px solid #229E83;
+    cursor: pointer;
+        user-select: none;
+}
+
+.form-group .select li:hover{
+    background-color: rgba(232, 228, 228, 0.5);
+}
+
+.form-group .select li.active{
+    background-color:  #229E83;
+    color: #fff;
+}
+
+.form-group .select li:first-child{
+    border-right:none;
+    border-radius:3px 0 0 3px;
+}
+
+.form-group .select li:last-child{
+    border-left:none;
+    border-radius:0px 3px 3px 0;
+}
+
+.page-heading{
+    margin-bottom: 20px;
+}
+
+.page-heading h2{
+    line-height: 0;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.page-heading p{
+    margin: 0;
+    font-size: 14px;
+    color: #868ba1;
+}
+
+.item-form{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+#smsText{
+    font-size: 14px;
+    line-height: 2;
+    display: none;
+}   
+.add-row{
+    background-color: #51445f;
+    border: none;
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    text-align: center;
+    padding: 0 10px;
+    margin-left: 10px;
+    
+}
+
+.delete-row{
+    padding: 0 10px;
+    background-color: #51445f;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.row.item-mis{
+    flex: 1;
+}
+
+#jobTxt.error,#jobTxt.error:focus{
+    border-color: #ff7b76 !important;
+    outline:none;
+}
+
+.error{
+    border-color: #ff7b76 !important;
+    outline:none;
+}
+
+
+.date-form {
+    display: flex;
+}
+
+.date-form button{
+    height: 100%;
+    background-color: #229E83;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 0 10px;
+}
+    
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgba(134,139,161,0.3);
+  font-size: 12px;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color:  rgba(134,139,161,0.3);
+  font-size: 12px;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color:  rgba(134,139,161,0.3);
+  font-size: 12px;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: rgba(134,139,161,0.3);
+  font-size: 12px;
+}
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+
+
+input[type="checkbox"].check-switch {
+    position: absolute;
+    margin: 8px 0 0 16px;    
+}
+input[type="checkbox"].check-switch + label {
+    position: relative;
+    padding: 7px 0 0 50px;
+    line-height: 2.0em;
+    cursor: pointer;
+}
+input[type="checkbox"].check-switch + label:before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 37px; /* x*5 */
+    height: 22px; /* x*3 */
+    border-radius: 16px; /* x*2 */
+    background: #fff;
+    border: 1px solid #ccc;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+input[type="checkbox"].check-switch + label:after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0px;
+    top: 0px;
+    width: 22px; /* x*3 */
+    height: 22px; /* x*3 */
+    border-radius: 16px; /* x*2 */
+    background: #fff;
+    border: 1px solid #ccc;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+input[type="checkbox"].check-switch:checked + label:after {
+    margin-left: 16px;
+}
+input[type="checkbox"].check-switch:checked + label:before {
+    background: #229E83;
+}
+
+
+input[type="checkbox"].check-switch:checked ~ #smsText {
+    display: block;
+}
+
+input[type="checkbox"].check-switch + label:focus{
+     color: #495057;
+    background-color: #fff;
+    border-color: #229E83;
+    outline: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+.submit-wrap{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submit-wrap input[type="submit"]{
+    background-color: #229E83;
+    color: #fff;
+    border: navajowhite;
+    padding: 10px;
+    min-width: 120px;
+    cursor: pointer;
+    border-radius: 0;
+}
+
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    -webkit-clip-path: none;
+    clip-path: none;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media all and (max-width:1024px) {
+    /* Style adjustments for viewports that meet the condition */
+    .menu-bar{
+        display: flex;
+    }
+    .logo{
+        display: none;
+    }
+
+    nav {
+        -webkit-transition: all 0.2s linear;
+        -moz-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+        transform: translateX(-250px);
+    }
+
+    nav.isSlide{
+        transform: translateX(0px);
+    }
+
+    section.content {
+        padding-top: 80px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;        
+    }
+
+    
+}
+
+@media all and (max-width:767px) {
+   .job-invoice-wrap{
+        display: none;
+   }
+   .form-wrap .row {
+        flex-flow: column wrap;
+    }
+    .entry-wrap{
+           flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    }
+
+    .item-wrap {
+        flex: 3;
+    }
+    .qty-wrap {
+        flex: 2;
+    }   
+    .addbutton-wrap{
+        flex: 1;
+    }
+
+    .form-wrap form {
+        flex-direction: column;
+    }
+
+    .row.customer-details {
+        border-right:none;
+        padding-right: 0px;
+    }
+
+    .row.entry-wrap {
+        padding-left: 0px;
+        border-right: none;
+    }
+    .add-job-wrap{
+        height: 100% !important;
+    }
+    .submit-wrap input[type="submit"]{
+        width: 100%;
+    }
+
+}
+
+@media all and (min-width:768px)  and (max-width:1024px){
+   .job-list-wrap{
+        flex: 0 0 auto;
+   }   
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .form-wrap form {
+        flex-direction: column;
+    }
+
+    .row.customer-details {
+        border-right:none;
+        padding-right: 0px;
+    }
+
+    .row.entry-wrap {
+        padding-left: 0px;
+        border-right: none;
+    }
+    .add-job-wrap{
+        height: 100% !important;
+    }
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
