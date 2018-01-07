@@ -395,8 +395,32 @@
 
             <section class="sms-edit-wrap">
                 <div class="close">
-                    <i class="icon-arrow-right"></i>
-                </div>                
+                    <div class="close-heding">SMS Edit Panel</div>
+                    <div class="close-button"><i class="icon-arrow-right"></i><i class="icon-arrow-left"></i></div>
+                </div>
+                <div class="dropdown">
+                    <label>Select SMS Template</label>
+                    <select style="display: none;">
+                        <option value="1">Trail</option>
+                        <option value="2">Delivery</option>
+                        <option value="3">promotion</option>
+                    </select>
+                    <div class="nice-select" tabindex="0">
+                        <span class="current">Some option</span>
+                        <ul class="list">
+                            <li data-value="1" class="option selected focus">Trail</li>
+                            <li data-value="2" class="option">Delivery</li>
+                            <li data-value="3" class="option">promotion</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sms-edit-text">
+                    <label>SMS Edit</label>
+                    <textarea class="form-control" name="smsText"  rows="5" cols="100"></textarea>
+                </div>
+                <div class="sms-button">
+                    <button>Send</button>
+                </div>                  
             </section>
         </div>
 
@@ -406,5 +430,6 @@
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
         <script src="js/datepicker.js"></script>
+        <script src="js/jquery.nicescroll.min.js"></script>       
     </body>
 </html>
