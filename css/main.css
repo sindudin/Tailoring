@@ -245,13 +245,15 @@ nav li.active a{
     color: #fff;
 }
 
+.list-wrap{
+    background-color: transparent !important;
+}
 
 .job-list-wrap {
     /* width: 25%; */
     height: 100%;
     /* float: left; */
     overflow: hidden;
-    border-right: 1px solid #f0f0f0;
     flex: 2;
 }
 
@@ -259,7 +261,7 @@ nav li.active a{
     width: 100%;
     display: flex;
     padding: 5px 10px;
-    border-bottom: 1px solid #f0f0f0;
+    background-color: #fff;
 }
 
 .job-top h2 {
@@ -309,13 +311,22 @@ button.add-job {
 }
 
 .job-list-bottom li {
-    padding: 15px 10px;
-    /* overflow: hidden; */
+       padding: 15px 10px;
     font-size: 14px;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #f0f0f0;
-    cursor: pointer;
+    /* border-bottom: 1px solid #f0f0f0; */
+    /* border: 10px solid rgb(229, 232, 233); */
+    /* border-right: 0; */
+    /* border-left: 0; */
+    margin: 10px 0;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.job-wrap{
+    display: flex;
+    flex: 10;
 }
 
 /*.job-list-bottom li:nth-child(odd) {
@@ -325,14 +336,68 @@ button.add-job {
     background-color: #fff;
 }*/
 
-.job-list-bottom li:hover {
+/*.job-list-bottom li:hover {
     background-color: #F5F5F5;
+}*/
+
+.job-details,.job-dates{
+    flex: 6;
 }
+
+.job-dates{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.job-dates p{
+    display: flex;
+}
+
+.job-dates p span:first-child {
+    width: 130px;
+        text-align: right;
+    margin-right: 10px;
+}
+
+.job-details .customer-id{
+    color: #1C9F84;
+    font-weight: 500;
+    font-size: 18px;
+}    
 
 .job-list-bottom li p{
     margin: 0px;
 }
 
+.ready-progress{
+        border-left: 5px solid rgb(187, 204, 128);
+}
+.ready-progress .job-progress{
+     font-size: 14px;
+    color: rgb(187, 204, 128);
+    font-weight: 500;
+}
+   
+
+.job-tool{
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+        flex: 1;
+    flex-direction: column;
+}
+
+.job-tool p {
+    font-size: 14px;
+    padding: 10px;
+}
+.job-tool p i{
+        font-size: 16px;
+    margin-left: 10px;
+    font-weight: bold;    
+    cursor: pointer;
+}
 
 .customer-name,.job-amount{
     font-size: 16px;
@@ -367,6 +432,7 @@ button.add-job {
     overflow-y: auto;
     flex: 3;
     padding: 60px;
+    display: none;
 }
 
 .invoice-info-wrap {
@@ -707,6 +773,25 @@ input[type="checkbox"].check-switch + label:focus{
 }
 
 
+.sms-edit-wrap {
+    width: 0;
+    background-color: #fff;
+    border-left: 1px solid #ccc;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* transform: translateX(250px); */
+    padding: 70px 10px 10px 10px;
+}
+
+.sms-edit-wrap.right-slide {
+    width: 250px;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    -webkit-user-select: none;
+}
 /*
  * Hide only visually, but have it available for screen readers:
  * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
@@ -856,6 +941,42 @@ input[type="checkbox"].check-switch + label:focus{
     .submit-wrap input[type="submit"]{
         width: 100%;
     }
+
+    .job-list-bottom li{
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .job-dates p {
+        font-size: 12px;
+    }
+
+    .job-dates p span:first-child {
+        width: 50px;
+    }
+
+    .job-tool {
+        flex-direction: row;
+        width: 100%;
+        background-color: rgba(239, 239, 239, 0.3);
+        border-top: 1px solid rgba(239, 239, 239, 0.7);
+    }
+
+    .job-wrap{
+                 padding: 10px;
+        }   
+
+    .job-tool p {
+    font-size: 12px;
+    padding: 10px;
+}
+
+.job-tool p i {
+    font-size: 12px;
+    margin-left: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
 
 }
 
